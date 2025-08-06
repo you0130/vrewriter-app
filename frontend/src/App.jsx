@@ -23,7 +23,7 @@ function App() {
     setGeneratedVideo(null)
 
     try {
-      const response = await fetch('http://localhost:5001/api/video-simple/generate', {
+      const response = await fetch('https://vrewriter-app-9kfj.vercel.app/api/video-simple/generate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ function App() {
       }
 
       const result = await response.json()
-      setGeneratedVideo(`http://localhost:5001${result.video_url}`)
+      setGeneratedVideo(`https://vrewriter-app-9kfj.vercel.app${result.video_url}`)
     } catch (err) {
       setError(err.message)
     } finally {
