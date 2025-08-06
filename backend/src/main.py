@@ -39,6 +39,10 @@ def serve(path):
         if os.path.exists(index_path):
             return send_from_directory(static_folder_path, 'index.html')
         else:
-            return "index.html not found", 404
+            return "Backend API is running", 200
+
+
+# Vercel用のエクスポート
+application = app
 
 

@@ -15,6 +15,9 @@
       "src": "/(.*)",
       "dest": "backend/src/main.py"
     }
-  ]
+  ],
+  "env": {
+    "PYTHONPATH": "backend"
+  }
 }
 
